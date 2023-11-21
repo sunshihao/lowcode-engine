@@ -11,7 +11,6 @@
     ]
   },
   "scripts": {
-    "dev": "turbo run dev --no-cache --parallel --continue",
     "build": "./scripts/build.sh",
     "build:npm": "lerna run build --stream",
     "build:umd": "lerna run build:umd --stream",
@@ -29,6 +28,7 @@
     "setup": "node ./scripts/setup.js",
     "setup:test": "./scripts/setup-for-test.sh",
     "setup:skip-build": "./scripts/setup-skip-build.sh",
+    "dev": "node ./scripts/start.js",
     "start": "node ./scripts/start.js",
     "test": "lerna run test --stream",
     "test:snapshot": "lerna run test:snapshot",
@@ -68,8 +68,5 @@
     "typescript": "4.6.2",
     "react-error-overlay": "6.0.9"
   },
-  "repository": "git@github.com:alibaba/lowcode-engine.git",
-  "dependencies": {
-    "turbo": "^1.10.16"
-  }
+  "repository": "git@github.com:alibaba/lowcode-engine.git"
 }
