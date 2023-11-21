@@ -129,6 +129,7 @@ export class Title extends Component<{
         })}
         onClick={this.handleClick}
       >
+        LocalLowCodeEngine
         {icon ? <b className="lc-title-icon">{icon}</b> : null}
         {this.renderLabel(_title.label)}
         {tip}

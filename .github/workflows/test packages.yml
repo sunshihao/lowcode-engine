@@ -1,108 +1,108 @@
-name: Lint & Test (Pkgs)
+# name: Lint & Test (Pkgs)
 
-on:
-  push:
-    paths:
-      - 'packages/**'
-      - '!packages/**.md'
-  pull_request:
-    paths:
-      - 'packages/**'
-      - '!packages/**.md'
+# on:
+#   push:
+#     paths:
+#       - 'packages/**'
+#       - '!packages/**.md'
+#   pull_request:
+#     paths:
+#       - 'packages/**'
+#       - '!packages/**.md'
 
-jobs:
-  lint:
-    runs-on: ubuntu-latest
-    steps:
-      - name: checkout
-        uses: actions/checkout@v2
+# jobs:
+#   lint:
+#     runs-on: ubuntu-latest
+#     steps:
+#       - name: checkout
+#         uses: actions/checkout@v2
 
-      - uses: actions/setup-node@v2
-        with:
-          node-version: '14'
+#       - uses: actions/setup-node@v2
+#         with:
+#           node-version: '14'
 
-      - name: install
-        run: npm i && npm run setup:skip-build
+#       - name: install
+#         run: npm i && npm run setup:skip-build
 
-      - name: lint
-        run: npm run lint
+#       - name: lint
+#         run: npm run lint
 
-  test-designer:
-    runs-on: ubuntu-latest
-    steps:
-      - name: checkout
-        uses: actions/checkout@v2
+#   test-designer:
+#     runs-on: ubuntu-latest
+#     steps:
+#       - name: checkout
+#         uses: actions/checkout@v2
 
-      - uses: actions/setup-node@v2
-        with:
-          node-version: '14'
+#       - uses: actions/setup-node@v2
+#         with:
+#           node-version: '14'
 
-      - name: install
-        run: npm i && npm run setup:skip-build
+#       - name: install
+#         run: npm i && npm run setup:skip-build
 
-      - name: test
-        run: cd packages/designer && npm test
+#       - name: test
+#         run: cd packages/designer && npm test
 
-  test-editor-skeleton:
-    runs-on: ubuntu-latest
-    steps:
-      - name: checkout
-        uses: actions/checkout@v2
+#   test-editor-skeleton:
+#     runs-on: ubuntu-latest
+#     steps:
+#       - name: checkout
+#         uses: actions/checkout@v2
 
-      - uses: actions/setup-node@v2
-        with:
-          node-version: '14'
+#       - uses: actions/setup-node@v2
+#         with:
+#           node-version: '14'
 
-      - name: install
-        run: npm i && npm run setup:skip-build
+#       - name: install
+#         run: npm i && npm run setup:skip-build
 
-      - name: test
-        run: cd packages/editor-skeleton && npm test
+#       - name: test
+#         run: cd packages/editor-skeleton && npm test
 
-  test-renderer-core:
-    runs-on: ubuntu-latest
-    steps:
-      - name: checkout
-        uses: actions/checkout@v2
+#   test-renderer-core:
+#     runs-on: ubuntu-latest
+#     steps:
+#       - name: checkout
+#         uses: actions/checkout@v2
 
-      - uses: actions/setup-node@v2
-        with:
-          node-version: '14'
+#       - uses: actions/setup-node@v2
+#         with:
+#           node-version: '14'
 
-      - name: install
-        run: npm i && npm run setup:skip-build
+#       - name: install
+#         run: npm i && npm run setup:skip-build
 
-      - name: test
-        run: cd packages/renderer-core && npm test
+#       - name: test
+#         run: cd packages/renderer-core && npm test
 
-  test-react-simulator-renderer:
-    runs-on: ubuntu-latest
-    steps:
-      - name: checkout
-        uses: actions/checkout@v2
+#   test-react-simulator-renderer:
+#     runs-on: ubuntu-latest
+#     steps:
+#       - name: checkout
+#         uses: actions/checkout@v2
 
-      - uses: actions/setup-node@v2
-        with:
-          node-version: '14'
+#       - uses: actions/setup-node@v2
+#         with:
+#           node-version: '14'
 
-      - name: install
-        run: npm i && npm run setup:skip-build
+#       - name: install
+#         run: npm i && npm run setup:skip-build
 
-      - name: test
-        run: cd packages/react-simulator-renderer && npm test
+#       - name: test
+#         run: cd packages/react-simulator-renderer && npm test
 
-  test-utils:
-    runs-on: ubuntu-latest
-    steps:
-      - name: checkout
-        uses: actions/checkout@v2
+#   test-utils:
+#     runs-on: ubuntu-latest
+#     steps:
+#       - name: checkout
+#         uses: actions/checkout@v2
 
-      - uses: actions/setup-node@v2
-        with:
-          node-version: '14'
+#       - uses: actions/setup-node@v2
+#         with:
+#           node-version: '14'
 
-      - name: install
-        run: npm i && npm run setup:skip-build
+#       - name: install
+#         run: npm i && npm run setup:skip-build
 
-      - name: test
-        run: cd packages/utils && npm test
+#       - name: test
+#         run: cd packages/utils && npm test

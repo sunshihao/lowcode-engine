@@ -1,7 +1,9 @@
 const fs = require('fs');
 const { join } = require('path');
 const esModules = [].join('|');
-const pkgNames = fs.readdirSync(join('..')).filter(pkgName => !pkgName.startsWith('.'));
+const pkgNames = fs.readdirSync(join('../../')).filter(pkgName => !pkgName.startsWith('.'));
+
+console.log('pkgNames---------', pkgNames)
 
 const jestConfig = {
   // transform: {

@@ -2,6 +2,7 @@
 node_modules/
 build/
 dist/
+apps/
 
 # 忽略文件
 **/*.min.css

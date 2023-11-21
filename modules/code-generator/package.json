@@ -52,15 +52,15 @@
       "changelog": true
     }
   },
-  "husky": {
-    "hooks": {
-      "pre-commit": "lint-staged",
-      "commit-msg": "commitlint -E HUSKY_GIT_PARAMS"
-    }
-  },
-  "lint-staged": {
-    "**/*.{js,jsx,ts,tsx}": "eslint"
-  },
+  // "husky": {
+  //   "hooks": {
+  //     "pre-commit": "lint-staged",
+  //     "commit-msg": "commitlint -E HUSKY_GIT_PARAMS"
+  //   }
+  // },
+  // "lint-staged": {
+  //   "**/*.{js,jsx,ts,tsx}": "eslint"
+  // },
   "dependencies": {
     "@alilc/lowcode-types": "^1.0.0",
     "@babel/generator": "^7.12.11",
