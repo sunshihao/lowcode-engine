@@ -28,7 +28,7 @@
     "setup": "node ./scripts/setup.js",
     "setup:test": "./scripts/setup-for-test.sh",
     "setup:skip-build": "./scripts/setup-skip-build.sh",
-    "dev": "node ./scripts/start.js",
+    "dev": "node ./scripts/dev.js",
     "start": "node ./scripts/start.js",
     "test": "lerna run test --stream",
     "test:snapshot": "lerna run test:snapshot",
