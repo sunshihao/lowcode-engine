@@ -9,7 +9,6 @@ demo
 es
 lib
 tests
-apps
 .*
 ~*
 
