@@ -1,5 +1,4 @@
 import { init, plugins } from '@alilc/lowcode-engine'; // 核心模块
-// import { init, plugins } from '@alilc/lowcode-engine-local'; // 核心模块
 import { createFetchHandler } from '@alilc/lowcode-datasource-fetch-handler'
 import EditorInitPlugin from './plugins/plugin-editor-init';
 import UndoRedoPlugin from '@alilc/lowcode-plugin-undo-redo';
@@ -23,6 +22,8 @@ import SimulatorLocalePlugin from './plugins/plugin-simulator-locale';
 import lowcodePlugin from './plugins/plugin-lowcode-component';
 import appHelper from './appHelper';
 import './global.scss';
+
+// import 
 
 async function registerPlugins() {
   await plugins.register(InjectPlugin);

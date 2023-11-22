@@ -16,6 +16,7 @@ deploy-space/.env
 # IDE
 .vscode
 .idea
+.dumi
 
 # Logs
 logs

@@ -10,7 +10,12 @@
       "**/jest"
     ]
   },
+  "version": "0.0.0",
+  "npmClient": "yarn",
   "scripts": {
+    "dev": "node ./scripts/dev.js",
+    "start": "node ./scripts/start.js",
+    "start:dumi": "dumi dev",
     "build": "./scripts/build.sh",
     "build:npm": "lerna run build --stream",
     "build:umd": "lerna run build:umd --stream",
@@ -28,8 +33,6 @@
     "setup": "node ./scripts/setup.js",
     "setup:test": "./scripts/setup-for-test.sh",
     "setup:skip-build": "./scripts/setup-skip-build.sh",
-    "dev": "node ./scripts/dev.js",
-    "start": "node ./scripts/start.js",
     "test": "lerna run test --stream",
     "test:snapshot": "lerna run test:snapshot",
     "watchdog:build": "node ./scripts/watchdog.js",
@@ -48,6 +51,7 @@
     "@types/react-router": "5.1.18",
     "babel-jest": "^26.5.2",
     "del": "^6.1.1",
+    "dumi": "2.2.14",
     "execa": "^5.1.1",
     "f2elint": "^2.0.1",
     "gulp": "^4.0.2",

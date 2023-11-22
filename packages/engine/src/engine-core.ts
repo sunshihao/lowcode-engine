@@ -172,7 +172,10 @@ engineConfig.set('isOpenSource', isOpenSource);
 // container which will host LowCodeEngine DOM
 let engineContainer: HTMLElement;
 // @ts-ignore webpack Define variable
-export const version = VERSION_PLACEHOLDER;
+// export const version = VERSION_PLACEHOLDER;  // 原有此行的代码报错 所以屏蔽
+export const version = 122;
+
+
 engineConfig.set('ENGINE_VERSION', version);
 
 const pluginPromise = registryInnerPlugin(designer, editor, plugins);
