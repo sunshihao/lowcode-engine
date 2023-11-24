@@ -109,6 +109,9 @@ const defaultSimulatorUrl = (() => {
   let urls;
   // eslint-disable-next-line @typescript-eslint/no-unused-vars
   const [_, prefix = '', dev] = /^(.+?)(\/js)?\/?$/.exec(publicPath) || [];
+
+  
+
   if (dev) {
     urls = [
       `${prefix}/css/react-simulator-renderer.css`,
@@ -482,11 +485,17 @@ export class BuiltinSimulatorHost implements ISimulatorHost<BuiltinSimulatorProp
       // required & TODO: think of update
       assetBundle(this.theme, AssetLevel.Theme),
       // required & use once
+
+      // 理论上来讲我根本不需要这个？？
+      // 估计就是为了不卡这样干的
+      // 假的！！
       assetBundle(
         this.get('simulatorUrl') ||
           (this.renderEnv === 'rax' ? defaultRaxSimulatorUrl : defaultSimulatorUrl),
         AssetLevel.Runtime,
       ),
+      
+
     ];
 
     // wait 准备 iframe 内容、依赖库注入
@@ -517,6 +526,9 @@ export class BuiltinSimulatorHost implements ISimulatorHost<BuiltinSimulatorProp
 
     // bind hotkey & clipboard
     const hotkey = this.designer.editor.get('innerHotkey');
+
+    console.log('hotkey', hotkey)
+
     hotkey.mount(this._contentWindow);
     const innerSkeleton = this.designer.editor.get('skeleton');
     innerSkeleton.focusTracker.mount(this._contentWindow);
